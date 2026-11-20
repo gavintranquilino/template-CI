@@ -1,0 +1,16 @@
+name: checks
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    name: repository checks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run checks
+        run: python3 tools/scripts/run_checks.py

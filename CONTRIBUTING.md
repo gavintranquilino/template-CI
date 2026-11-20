@@ -30,7 +30,7 @@ Read the [Coding Style](docs/coding-style.md) and [Documentation](docs/documenta
 * Report what you checked and any checks you could not run, with the reason.
 * When introducing tooling, document its prerequisites and how to run the same checks locally.
 
-The base template supplies documentation conventions only. Each repository or derived template adds its own build, test, formatting, and automation commands.
+Pull requests run the checks described in [Tools](tools/README.md), which also explains how to run them locally. Each repository or derived template adds its own build, test, and formatting commands.
 
 ## Review
 
