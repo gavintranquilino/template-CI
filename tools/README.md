@@ -27,7 +27,9 @@ To run selected checks, name them.
 python3 tools/scripts/run_checks.py links whitespace
 ```
 
-The [checks workflow](../.github/workflows/checks.yml) runs the same command on every pull request. To add a check, add its script here and register it in `CHECKS` in `scripts/run_checks.py`.
+The [checks workflow](../.github/workflows/checks.yml) runs each check as a separate job named `check/<name>`, such as `check/acronyms`. It runs on every pull request, on pushes to `main`, and when started manually from the Actions tab.
+
+To add a check, add its script to `scripts/`, list it in the table above, register it in `CHECKS` in `scripts/run_checks.py`, and add its name to the `check` list in the workflow.
 
 ## Fixing Failures
 
